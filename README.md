@@ -37,21 +37,24 @@ The app.py file handles Streamlit UI and interactions with the chatbot.
 
 Create a SQL Server database named SalesDB and add the following tables:
 CREATE TABLE Customers (
-    id INT PRIMARY KEY IDENTITY,
-    name NVARCHAR(100),
-    phone NVARCHAR(20),
-    job NVARCHAR(100),
-    domain NVARCHAR(100),
-    preferences NVARCHAR(255)
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100),
+    Age INT,
+    Email NVARCHAR(100),
+    PhoneNb NVARCHAR(20),
+    JobOccupation NVARCHAR(100),
+    DomaineOfInterest NVARCHAR(100),
+    Preferences NVARCHAR(255)
 );
 
 CREATE TABLE Products (
-    id INT PRIMARY KEY IDENTITY,
-    name NVARCHAR(100),
-    category NVARCHAR(100),
-    price DECIMAL(10,2),
-    rating DECIMAL(3,1)
-
+    ProductID INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(100),
+    Category NVARCHAR(50),
+    Price DECIMAL(10, 2),
+    Stock INT,
+    Rating DECIMAL(3, 2)
+);
 **Customization**
 
 All customization and logic changes should be done in app.py.
@@ -63,8 +66,11 @@ Change the logic of how the database is queried
 
 **Libraries Used**
 
-Pydantic-AI – Tool-based LLM agent framework
-Streamlit – Interactive front-end
-pyodbc – For SQL Server connection
-OpenAI GPT-4o – The LLM brain behind the assistant
+Pydantic-AI – Tool-based LLM agent framework.
+
+Streamlit – Interactive front-end.
+
+pyodbc – For SQL Server connection.
+
+OpenAI GPT-4o – The LLM brain behind the assistant.
 
