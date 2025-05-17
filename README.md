@@ -1,8 +1,9 @@
 # SalesAssistant
-Overview
+**Overview**
+
 (Sales AI Lead) is powered by **OpenAI’s GPT-4o** and enhanced through tools like emotional tone analysis, social proof, scarcity, compliments, and personalized responses. It uses real-time data from a SQL Server database to recommend products, tailor conversations to individual users, and adapt its responses naturally based on user input.
 
-Features
+**Features**
 - Emotionally intelligent conversation flow  
 - Product recommendations by category  
 - Customer profile personalization  
@@ -11,28 +12,28 @@ Features
 - Real-time SQL product listings  
 - Lead management and user profiling  
 
-Installation
+**Installation**
 
 1. **Clone the repository**
    git clone https://github.com/yourusername/sail-assistant.git
    cd sail-assistant
 
-2.Install dependencies
+2.**Install dependencies**
 pip install -r requirements.txt
 
-3.Set your OpenAI key
+3.**Set your OpenAI key**
 os.environ["OPENAI_API_KEY"] = "your-key-here"
 
-Usage
+**Usage**
 
 Run the app using: streamlit run app.py
 
-How It Works
+**How It Works**
 
 The Negotiation_Closing.py file defines the AI agent using Pydantic-AI tools. Each tool is a modular function (e.g., highlight_scarcity, offer_bonus) that the agent can call depending on the user's intent or emotional tone.
 The app.py file handles Streamlit UI and interactions with the chatbot.
 
-Database Setup
+**Database Setup**
 
 Create a SQL Server database named SalesDB and add the following tables:
 CREATE TABLE Customers (
@@ -51,7 +52,7 @@ CREATE TABLE Products (
     price DECIMAL(10,2),
     rating DECIMAL(3,1)
 
-Customization
+**Customization**
 
 All customization and logic changes should be done in app.py.
 You can:
@@ -60,7 +61,7 @@ Add or remove tools from the agent
 Customize the Streamlit layout
 Change the logic of how the database is queried
 
-Libraries Used
+**Libraries Used**
 
 Pydantic-AI – Tool-based LLM agent framework
 Streamlit – Interactive front-end
