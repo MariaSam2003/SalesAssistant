@@ -24,13 +24,16 @@ pip install -r requirements.txt
 os.environ["OPENAI_API_KEY"] = "your-key-here"
 
 Usage
+
 Run the app using: streamlit run app.py
 
 How It Works
+
 The Negotiation_Closing.py file defines the AI agent using Pydantic-AI tools. Each tool is a modular function (e.g., highlight_scarcity, offer_bonus) that the agent can call depending on the user's intent or emotional tone.
 The app.py file handles Streamlit UI and interactions with the chatbot.
 
 Database Setup
+
 Create a SQL Server database named SalesDB and add the following tables:
 CREATE TABLE Customers (
     id INT PRIMARY KEY IDENTITY,
@@ -49,6 +52,7 @@ CREATE TABLE Products (
     rating DECIMAL(3,1)
 
 Customization
+
 All customization and logic changes should be done in app.py.
 You can:
 Modify the AI's personality and prompt
@@ -57,6 +61,7 @@ Customize the Streamlit layout
 Change the logic of how the database is queried
 
 Libraries Used
+
 Pydantic-AI – Tool-based LLM agent framework
 Streamlit – Interactive front-end
 pyodbc – For SQL Server connection
