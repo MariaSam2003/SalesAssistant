@@ -55,6 +55,7 @@ CREATE TABLE Products (
     Stock INT,
     Rating DECIMAL(3, 2)
 );
+
 **Customization**
 
 All customization and logic changes should be done in app.py.
